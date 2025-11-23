@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>List files with checkboxes</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Filenames</h1>
+
+    <input type="file" id="folderInput" webkitdirectory multiple>
+
+    <div class="headerBar">
+      <button id="backButton">⬆️</button>
+      <span id="currentPath"></span>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th> <!-- checkboxes -->
+          <th data-sort-key="name">Name</th>
+          <th data-sort-key="path">Relative path</th>
+          <th data-sort-key="size">Size (bytes)</th>
+        </tr>
+      </thead>
+      <tbody id="fileTableBody"></tbody>
+    </table>
+    <br>
+    <div id="fileCount"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
